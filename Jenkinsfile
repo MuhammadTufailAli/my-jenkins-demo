@@ -8,6 +8,13 @@ pipeline {
             }
         }
 
+        stage('Security Scan') {
+            steps {
+                echo 'Running Semgrep security scan'
+                bat 'semgrep scan --config=auto --error'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 echo 'Installing dependencies'
