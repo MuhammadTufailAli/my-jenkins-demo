@@ -11,7 +11,7 @@ pipeline {
         stage('Security Scan') {
             steps {
                 echo 'Running Semgrep security scan'
-                bat 'semgrep scan --config=auto --error'
+                bat 'C:\\Users\\alitu\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\semgrep.exe scan --config=auto --error'
             }
         }
 
